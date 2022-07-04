@@ -15,8 +15,8 @@ from pathlib import Path
 import django_on_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-
+#BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -26,8 +26,6 @@ SECRET_KEY = 'django-insecure-49$py#a=t)(sgk@12t93kb%%qqmf(_iubw4k+%us(=*s-)6539
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
-DISABLE_COLLECTSTATIC = 1
 
 ALLOWED_HOSTS = ["https://quiz-py.herokuapp.com/", "127.0.0.1"]
 
@@ -107,6 +105,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
+
+DISABLE_COLLECTSTATIC=1
 
 LANGUAGE_CODE = 'pt-br'
 
