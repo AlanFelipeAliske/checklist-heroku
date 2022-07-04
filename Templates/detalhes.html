@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<div class="container mt-4 mb-4">
+  <div class="">
+    <h3>Detalhes</h3>
+
+    <table class="table table-bordered mt-4">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col"> Equipamentos do {{checklist}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for detalhe in detalhes %}
+        <tr>
+          <th class="col-1" scope="row"> {{detalhe.id}} </th>
+          <td> {{detalhe.equipamentoseguraca}} </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <button class="btn btn-primary" onclick="history.back()"><i class="fas fa-solid fa-arrow-left"></i> Voltar </button>
+  </div>
+</div>
+
+{% endblock %}

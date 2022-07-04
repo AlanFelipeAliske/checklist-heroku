@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<div class="container mt-4 mb-4">
+    <h3>{{titulo}}</h3>
+    {% for message in messages %}
+      <div style="color: red;"><i class="fas fa-light fa-exclamation"></i> {{ message }} </div>
+    {% endfor %}
+    <form class="" action="submit" method="POST"> {% csrf_token %}
+        <div class="form-group">
+            <input type="number" name="id" value="{{veiculo.id}}" hidden="true">
+            <input class="form-control form-control-sm" type="text" name="descricao_veiculo" value="{{veiculo.descricao_veiculo}}">
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+        <a href="/veiculos/" class="btn btn-danger">Cancelar</a>
+    </form>
+</div>
+
+{% endblock %}
+

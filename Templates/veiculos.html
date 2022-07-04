@@ -1,0 +1,35 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<div class="container mt-4 mb-4">
+  <div class="">
+    <h3>Veiculos cadastrados</h3>
+    {% for message in messages %}
+      <div style="color: green;"><i class="fas fa-solid fa-check"></i> {{ message }} </div>
+    {% endfor %}
+    <table class="table table-bordered mt-4">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Veículos</th>
+          <th scope="col">Editar</th>
+          <th scope="col">Excluir</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for veiculo in veiculos %}
+        <tr>
+          <th class="col-1" scope="row">{{veiculo.id}}</th>
+          <td>{{veiculo.descricao_veiculo}}</td>
+          <td class="col-1"> <a href="editar/?id={{ veiculo.id }}" class="btn btn-primary">Editar</a></td>
+          <td class="col-1"><a href="excluir/{{ veiculo.id }}/" class="btn btn-danger">Excluir</a></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <a href="adicionar/" class="btn btn-primary"><i class="fas fa-solid fa-plus"></i> Adicionar veículo</a>
+  </div>
+</div>
+
+{% endblock %}
