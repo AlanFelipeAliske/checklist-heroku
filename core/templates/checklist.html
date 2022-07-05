@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<div class="container mt-4 mb-4">
+  <div class="">
+    <h3>Lista de checklist</h3>
+    <table class="table table-bordered mt-4">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Checklists</th>
+          <th scope="col">Adicionado por</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for checklist in checklists %}
+        <tr>
+          <th class="col-1" scope="row">{{checklist.id}}</th>
+          <td> <a href="detalhes/?id={{ checklist.id }}" title="Detalhes"> {{checklist}} </a></td>
+          <td>{{checklist.usuario}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <h5>{{checklist.descricao}}</h5>
+  </div>
+</div>
+
+{% endblock %}
