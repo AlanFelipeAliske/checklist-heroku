@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<div class="container mt-4 mb-4">
+  <h3>Dados do usuário logado</h3>
+  <table class="table table-bordered mt-4">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th class="col-1" scope="row">{{id}}</th>
+        <td>{{username}}</td>
+        <td> {{email}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}
