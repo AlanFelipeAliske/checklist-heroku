@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'django-insecure-49$py#a=t)(sgk@12t93kb%%qqmf(_iubw4k+%us(=*s-)6539'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["https://quiz-py.herokuapp.com/", "127.0.0.1"]
 
@@ -76,6 +76,8 @@ WSGI_APPLICATION = 'AppDjango.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -121,6 +123,15 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
+
+
+
+#db_path = BASE_DIR / 'db.sqlite3'
+
+# or
+
+db_path = os.path.join(str(BASE_DIR), 'db.sqlite3')
+
 
 
 STATIC_URL = '/static/'
