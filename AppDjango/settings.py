@@ -25,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'django-insecure-49$py#a=t)(sgk@12t93kb%%qqmf(_iubw4k+%us(=*s-)6539'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["https://quiz-py.herokuapp.com/", "127.0.0.1"]
 
