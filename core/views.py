@@ -55,7 +55,7 @@ def usuario(request):
 
 # ---------------------------------------------------------------------------------------------
 
-@login_required(login_url='/login/')
+#@login_required(login_url='/login/')
 def checklist(request):
     checklist = CheckList.objects.all()
     response = {'checklists': checklist}
@@ -63,7 +63,7 @@ def checklist(request):
 
 # ---------------------------------------------------------------------------------------------
 
-@login_required(login_url='/login/')
+#@login_required(login_url='/login/')
 def detalhes(request):
     id_checklist = request.GET.get('id')
     checklist = CheckList.objects.get(id=id_checklist)
@@ -73,7 +73,7 @@ def detalhes(request):
 
 # ---------------------------------------------------------------------------------------------
 
-@login_required(login_url='/login/')
+#@login_required(login_url='/login/')
 def veiculos(request):
     veiculo = Veiculos.objects.all()
     response = {'veiculos': veiculo}
@@ -148,7 +148,7 @@ def submit_adicionar_veiculo(request):
 
 # ---------------------------------------------------------------------------------------------
 
-@login_required(login_url='/login/')
+#@login_required(login_url='/login/')
 def equipamento(request):
     equipamentoseguraca = EquipamentoSeguraca.objects.all()
     response = {'equipamentoseguracas': equipamentoseguraca}
