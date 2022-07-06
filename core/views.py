@@ -1,4 +1,3 @@
-
 from collections import UserList
 import re
 from urllib import response
@@ -222,5 +221,3 @@ def submit_adicionar_equipamento(request):
             EquipamentoSeguraca.objects.create(descricao_equipamento_seguranca=descricao_equipamento_seguranca)
         return redirect('/equipamentos/')
     return render(request, 'editar-equipamentos.html')
-
-# ---------------------------------------------------------------------------------------------
