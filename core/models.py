@@ -165,7 +165,15 @@ class CheckListDetalhe(models.Model):
     def __str__(self):
         return self.checklist
 
+class CoreEquipamentoseguraca(models.Model):
+    descricao_equipamento_seguranca = models.CharField(max_length=256, blank=True, null=True)
 
+    class Meta:
+        managed = False
+        db_table = 'core_equipamentoseguraca'
+    class Meta:
+        managed = False
+        db_table = 'django_migrations'
 
 
 
